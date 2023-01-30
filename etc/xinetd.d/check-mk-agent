@@ -6,7 +6,7 @@ service check_mk
         protocol       = tcp
         wait           = no
         user           = root
-        server         = /usr/local/bin/check_mk_agent
+        server         = /data/scripts/check_mk/check_mk_agent
         # only_from    = 10.118.14.5 10.118.14.37
         disable        = no
 }
