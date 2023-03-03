@@ -1,4 +1,3 @@
-# cat /data/scripts/check_mk/check_mk_agent
 #!/bin/ash
 # Check_MK Agent for BusyBox
 # +------------------------------------------------------------------+
@@ -177,3 +176,10 @@ echo '<<<systemtime>>>'
 date '+%s'
 
 
+#Own changes:
+#Run all Local checks
+echo '<<<local:sep(0)>>>'
+for f in "${LOCALDIR}/*"
+do
+$f
+done
