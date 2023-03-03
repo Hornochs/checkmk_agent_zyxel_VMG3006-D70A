@@ -179,7 +179,4 @@ date '+%s'
 #Own changes:
 #Run all Local checks
 echo '<<<local:sep(0)>>>'
-for f in "${LOCALDIR}/*"
-do
-$f
-done
+for f in ${LOCALDIR}/* ; do [ -x "$f" ] && [ ! -d "$f" ] && "$f" && printf "\n" ; done
